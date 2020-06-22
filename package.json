@@ -1,0 +1,11 @@
+{
+  "name": "lambda-update-image-builder-pipeline",
+  "version": "1.0.0",
+  "description": "Parses an sns trigger to update an EC2 Image Builder Pipeline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scott Miller",
+  "license": "MIT"
+}
