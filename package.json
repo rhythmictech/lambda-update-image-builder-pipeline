@@ -12,6 +12,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
+    "build": "node-lambda package -e production -x 'event.json build.env bin .github'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "1.0.0"
