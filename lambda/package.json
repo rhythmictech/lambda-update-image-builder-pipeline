@@ -7,12 +7,19 @@
   },
   "description": "Parses an sns trigger to update an EC2 Image Builder Pipeline",
   "devDependencies": {
+    "eslint": "^7.3.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "node-lambda": "^0.17.0"
   },
   "license": "MIT",
   "main": "index.js",
   "scripts": {
     "build": "node-lambda package -e production -x 'event.json build.env bin .github'",
+    "run": "node-lambda run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "1.0.0"
