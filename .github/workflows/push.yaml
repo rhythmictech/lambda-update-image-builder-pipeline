@@ -32,6 +32,7 @@ jobs:
           commit_user_email: noreply@rhythmictech.com
           commit_author: Linter Bot <actions@github.com>
   tflint:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: setup Terraform
@@ -49,6 +50,7 @@ jobs:
           flags: --module
           level: error
   tfsec:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: setup Terraform
@@ -65,6 +67,7 @@ jobs:
           filter_mode: nofilter
           level: warning
   misspell:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: misspell
@@ -76,6 +79,7 @@ jobs:
           filter_mode: nofilter
           level: error
   yamllint:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: yamllint
@@ -86,6 +90,7 @@ jobs:
           filter_mode: nofilter
           level: error
   eslint:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: eslint
