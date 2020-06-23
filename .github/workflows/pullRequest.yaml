@@ -95,6 +95,5 @@ jobs:
         with:
           reporter: github-pr-check
           workdir: lambda/
-          reporter: github-pr-check
           filter_mode: added
           level: error
