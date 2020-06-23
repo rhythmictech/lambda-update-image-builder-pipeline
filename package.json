@@ -13,6 +13,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node-lambda package -e production -x 'event.json build.env bin .github'",
+    "run": "node-lambda run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "1.0.0"
