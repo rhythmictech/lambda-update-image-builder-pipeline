@@ -1,4 +1,4 @@
-# terraform-anycloud-template
+# lambda-update-image-builder-pipeline
 Template repository for terraform modules. Good for any cloud and any provider.  
 [![tflint](https://github.com/rhythmictech/lambda-update-image-builder-pipeline/workflows/tflint/badge.svg?branch=main&event=push)](https://github.com/rhythmictech/lambda-update-image-builder-pipeline/actions?query=workflow%3Atflint+event%3Apush+branch%3Amain)
 [![tfsec](https://github.com/rhythmictech/lambda-update-image-builder-pipeline/workflows/tfsec/badge.svg?branch=main&event=push)](https://github.com/rhythmictech/lambda-update-image-builder-pipeline/actions?query=workflow%3Atfsec+event%3Apush+branch%3Amain)
