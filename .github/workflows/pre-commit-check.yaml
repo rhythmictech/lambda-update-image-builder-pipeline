@@ -14,12 +14,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
-      - uses: actions/cache@v1
-        with:
-          path: ~/.cache/pre-commit
-          key: pre-commit|${{ hashFiles('.pre-commit-config.yaml') }}
-          restore-keys: |
-            pre-commit
+      - uses: actions/setup-python@v2
       - name: pre-commit run all
         uses: pre-commit/action@v2.0.0
         with:
@@ -33,10 +28,18 @@ jobs:
           commit_user_name: Linter Bot
           commit_user_email: noreply@rhythmictech.com
           commit_author: Linter Bot <actions@github.com>
-      - name: Lint Code Base
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Set up Python
+        uses: actions/setup-python@v2
+      - name: Lint
         uses: docker://github/super-linter:v2.1.0
         env:
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: true
           VALIDATE_ANSIBLE: false
           VALIDATE_PERL: false
           VALIDATE_PYTHON: false

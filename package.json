@@ -1,11 +1,19 @@
 {
   "name": "lambda-update-image-builder-pipeline",
-  "version": "1.0.0",
+  "author": "Scott Miller",
+  "dependencies": {
+    "aws-sdk": "^2.702.0",
+    "semver": "^7.3.2"
+  },
   "description": "Parses an sns trigger to update an EC2 Image Builder Pipeline",
+  "devDependencies": {
+    "node-lambda": "^0.17.0"
+  },
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
+    "build": "node-lambda package -e production -x 'event.json build.env bin .github'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Scott Miller",
-  "license": "MIT"
+  "version": "1.0.0"
 }

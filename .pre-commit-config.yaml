@@ -15,6 +15,9 @@ repos:
         args:
           - --fix=lf
       - id: no-commit-to-branch
+        args:
+          - --branch
+          - main
       - id: pretty-format-json
         args:
           - --autofix
